@@ -1,0 +1,571 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop All - Collab Crocs</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,aspect-ratio"></script>
+    <style>
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 340px;
+        max-height: 380px;
+        min-width: 0;
+      }
+      .product-card .product-image-container {
+        width: 100%;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 1px solid #e5e7eb;
+      }
+      .product-card img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+        margin: auto;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#181111] dark group/design-root overflow-x-hidden"
+      style="font-family: 'Be Vietnam Pro', 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#382929] px-4 sm:px-6 md:px-10 py-3"
+        >
+          <a
+            href="explore.html"
+            class="flex items-center gap-2 sm:gap-4 text-white"
+          >
+            <div class="size-4 sm:size-5">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2
+              class="text-white text-md sm:text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Collab Crocs
+            </h2>
+          </a>
+          <div
+            class="flex flex-1 justify-end items-center gap-2 sm:gap-4 md:gap-8"
+          >
+            <nav class="hidden md:flex items-center gap-4 lg:gap-9">
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-[#e92932]"
+                href="explore.html"
+                >Home</a
+              >
+              <a
+                class="text-[#e92932] text-sm font-bold leading-normal"
+                href="index.html"
+                >Shop All</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-[#e92932]"
+                href="index.html?filter=new"
+                >New Arrivals</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-[#e92932]"
+                href="index.html?filter=sale"
+                >Sale</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal hover:text-[#e92932]"
+                href="contact.html"
+                >Contact</a
+              >
+            </nav>
+            <div
+              class="hidden sm:flex flex-1 justify-end max-w-[200px] md:max-w-xs lg:max-w-sm"
+            >
+              <label class="flex flex-col min-w-40 !h-9 sm:!h-10 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                  <div
+                    class="text-[#b89d9f] flex border-none bg-[#382929] items-center justify-center pl-3 rounded-l-xl border-r-0"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18px"
+                      height="18px"
+                      sm:width="20px"
+                      sm:height="20px"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    id="searchInput"
+                    placeholder="Search..."
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#382929] focus:border-none h-full placeholder:text-[#b89d9f] px-2 sm:px-3 text-sm sm:text-base font-normal leading-normal"
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="flex gap-2">
+              <button
+                id="searchIconMobileButton"
+                class="sm:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 w-9 bg-[#382929] text-white hover:bg-[#533c3d]"
+                aria-label="Open Search"
+              >
+                <div class="text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18px"
+                    height="18px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="hidden sm:flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white hover:bg-[#533c3d]"
+                aria-label="User Account"
+              >
+                <div class="text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18px"
+                    height="18px"
+                    sm:width="20px"
+                    sm:height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white hover:bg-[#533c3d]"
+                aria-label="Shopping Bag"
+              >
+                <div class="text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18px"
+                    height="18px"
+                    sm:width="20px"
+                    sm:height="20px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <button
+              id="mobileMenuButton"
+              aria-label="Open Menu"
+              class="md:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white hover:bg-[#533c3d]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,88H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div
+          id="searchInputMobileContainer"
+          class="hidden p-4 bg-[#261c1c] sm:hidden"
+        >
+          <input
+            id="searchInputMobile"
+            placeholder="Search products..."
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#382929] focus:border-none h-10 placeholder:text-[#b89d9f] px-4 text-sm font-normal leading-normal"
+          />
+        </div>
+        <nav
+          id="mobileMenu"
+          class="hidden md:hidden bg-[#261c1c] p-4 text-center"
+        >
+          <a
+            class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]"
+            href="explore.html"
+            >Home</a
+          >
+          <a
+            class="block py-3 text-[#e92932] text-base font-bold leading-normal"
+            href="index.html"
+            >Shop All</a
+          >
+          <a
+            class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]"
+            href="index.html?filter=new"
+            >New Arrivals</a
+          >
+          <a
+            class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]"
+            href="index.html?filter=sale"
+            >Sale</a
+          >
+          <a
+            class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+
+        <main
+          class="px-4 sm:px-6 md:px-10 lg:px-20 flex flex-1 justify-center py-5"
+        >
+          <div
+            class="layout-content-container flex flex-col max-w-[1200px] w-full flex-1"
+          >
+            <div class="flex flex-wrap justify-between items-center gap-3 p-4">
+              <h1
+                id="productsTitle"
+                class="text-white tracking-light text-xl sm:text-2xl md:text-[32px] font-bold leading-tight"
+              >
+                All Products
+              </h1>
+            </div>
+            <div
+              class="flex gap-2 sm:gap-3 px-4 py-3 flex-wrap justify-center sm:justify-start"
+            >
+              <button
+                data-filter="all"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#e92932] px-3 sm:px-4 hover:bg-[#c32029] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  All
+                </p>
+              </button>
+              <button
+                data-filter="men"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Men
+                </p>
+              </button>
+              <button
+                data-filter="women"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Women
+                </p>
+              </button>
+              <button
+                data-filter="kids"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Kids
+                </p>
+              </button>
+              <button
+                data-filter="accessories"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Accessories
+                </p>
+              </button>
+              <button
+                data-filter="designer"
+                class="hidden xs:flex filter-button h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Designer
+                </p>
+              </button>
+              <button
+                data-filter="limited"
+                class="hidden xs:flex filter-button h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Limited
+                </p>
+              </button>
+              <button
+                data-filter="artist"
+                class="hidden sm:flex filter-button h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Artist
+                </p>
+              </button>
+              <button
+                data-filter="themed"
+                class="hidden sm:flex filter-button h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Themed
+                </p>
+              </button>
+              <button
+                data-filter="new"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  New
+                </p>
+              </button>
+              <button
+                data-filter="sale"
+                class="filter-button flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-[#382929] px-3 sm:px-4 hover:bg-[#533c3d] focus:bg-[#c32029]"
+              >
+                <p
+                  class="text-white text-xs sm:text-sm font-medium leading-normal"
+                >
+                  Sale
+                </p>
+              </button>
+            </div>
+            <div
+              id="productGrid"
+              class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 p-4"
+            ></div>
+            <div id="noResults" class="hidden text-center p-10">
+              <p class="text-white text-lg sm:text-xl">
+                No products found matching your criteria.
+              </p>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="flex justify-center border-t border-solid border-t-[#382929]"
+        >
+          <div class="flex w-full max-w-[960px] flex-1 flex-col">
+            <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div
+                class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 @[480px]:flex-row @[480px]:justify-around"
+              >
+                <a
+                  class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white"
+                  href="#"
+                  >About Us</a
+                >
+                <a
+                  class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white"
+                  href="contact.html"
+                  >Contact</a
+                >
+                <a
+                  class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white"
+                  href="#"
+                  >Privacy Policy</a
+                >
+                <a
+                  class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white"
+                  href="#"
+                  >Terms of Service</a
+                >
+              </div>
+              <p
+                class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal"
+              >
+                © 2024 Collab Crocs. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="products.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const productGrid = document.getElementById("productGrid");
+        const productsTitle = document.getElementById("productsTitle");
+        const noResultsDiv = document.getElementById("noResults");
+        let currentFilter = "all";
+        let currentSearchTerm = "";
+
+        const params = new URLSearchParams(window.location.search);
+        const initialFilter = params.get("filter");
+        if (initialFilter) {
+          currentFilter = initialFilter.toLowerCase();
+        }
+
+        function updateProductsTitle(filter) {
+          let titleText = "All Products";
+          if (filter !== "all" && filter) {
+            titleText = `${
+              filter.charAt(0).toUpperCase() + filter.slice(1)
+            } Products`;
+          }
+          if (currentSearchTerm) {
+            titleText =
+              `Search results for "${currentSearchTerm}"` +
+              (filter !== "all" && filter ? ` in ${filter}` : "");
+          }
+          productsTitle.textContent = titleText;
+        }
+
+        function displayProducts() {
+          productGrid.innerHTML = "";
+          const filteredProducts = products.filter((product) => {
+            const productCategories = product.category.toLowerCase().split(" ");
+            const matchesCategory =
+              currentFilter === "all" ||
+              productCategories.includes(currentFilter);
+            const matchesSearch =
+              !currentSearchTerm ||
+              product.name.toLowerCase().includes(currentSearchTerm) ||
+              product.description.toLowerCase().includes(currentSearchTerm) ||
+              productCategories.some((cat) => cat.includes(currentSearchTerm));
+            return matchesCategory && matchesSearch;
+          });
+
+          if (filteredProducts.length === 0) {
+            noResultsDiv.classList.remove("hidden");
+          } else {
+            noResultsDiv.classList.add("hidden");
+          }
+
+          filteredProducts.forEach((product) => {
+            const productCard = `
+                        <a href="detail.html?id=${
+                          product.id
+                        }" class="product-card flex flex-col gap-2 sm:gap-3 pb-3 group rounded-lg hover:bg-[#261c1c] p-2 transition-all" data-category="${product.category.toLowerCase()}">
+                            <div class="product-image-container">
+                                <img src="${product.image}" alt="${
+              product.name
+            }">
+                            </div>
+                            <div>
+                                <p class="text-white text-xs sm:text-sm md:text-base font-medium leading-normal group-hover:text-[#e92932] truncate">${
+                                  product.name
+                                }</p>
+                                <p class="text-[#b89d9f] text-xs sm:text-sm font-normal leading-normal">${
+                                  product.price
+                                }</p>
+                            </div>
+                        </a>
+                    `;
+            productGrid.innerHTML += productCard;
+          });
+          updateProductsTitle(currentFilter);
+        }
+
+        const filterButtons = document.querySelectorAll(".filter-button");
+        filterButtons.forEach((button) => {
+          if (button.dataset.filter === currentFilter) {
+            button.classList.remove("bg-[#382929]");
+            button.classList.add("bg-[#e92932]");
+          } else {
+            button.classList.remove("bg-[#e92932]");
+            button.classList.add("bg-[#382929]");
+          }
+          button.addEventListener("click", function () {
+            currentFilter = this.dataset.filter;
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("bg-[#e92932]");
+              btn.classList.add("bg-[#382929]");
+            });
+            this.classList.remove("bg-[#382929]");
+            this.classList.add("bg-[#e92932]");
+            displayProducts();
+          });
+        });
+
+        const searchInput = document.getElementById("searchInput");
+        const searchInputMobile = document.getElementById("searchInputMobile");
+        const searchInputMobileContainer = document.getElementById(
+          "searchInputMobileContainer"
+        );
+        const searchIconMobileButton = document.getElementById(
+          "searchIconMobileButton"
+        );
+
+        function handleSearch(event) {
+          currentSearchTerm = event.target.value.toLowerCase();
+          displayProducts();
+        }
+
+        if (searchInput) searchInput.addEventListener("input", handleSearch);
+        if (searchInputMobile)
+          searchInputMobile.addEventListener("input", handleSearch);
+        if (searchIconMobileButton && searchInputMobileContainer) {
+          searchIconMobileButton.addEventListener("click", function () {
+            searchInputMobileContainer.classList.toggle("hidden");
+            if (!searchInputMobileContainer.classList.contains("hidden")) {
+              searchInputMobile.focus();
+            }
+          });
+        }
+
+        displayProducts();
+      });
+
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>

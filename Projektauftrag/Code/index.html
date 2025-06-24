@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crocs Collaborations - Exklusive Kooperationen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glass-container">
+      <header class="glass-header">
+        <nav class="glass-nav">
+          <a href="index.html" class="logo-link"
+            ><img
+              src="../pictures/logo.png"
+              alt="Crocs Collabs Logo"
+              class="logo-img"
+          /></a>
+          <ul class="nav-links">
+            <li class="nav-home"><a href="index.html">Home</a></li>
+            <li><a href="products.html">Produkte</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li>
+              <a href="cart.html" class="cart-icon"
+                >🛒 <span id="cart-count">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="glass-main">
+        <section id="hero" class="glass-section">
+          <h1>Exklusive Crocs Collaborations</h1>
+          <p>
+            Entdecken Sie limitierte Editionen und einzigartige Kooperationen
+          </p>
+        </section>
+        <section id="new-release" class="glass-section new-release-section">
+          <!-- Neue Schuhe werden per JS geladen -->
+        </section>
+        <section id="featured" class="glass-section">
+          <h2>Beliebte Collaborations</h2>
+          <div class="product-grid" id="featuredProducts">
+            <!-- Featured products will be loaded dynamically -->
+          </div>
+        </section>
+
+        <section id="categories" class="glass-section">
+          <h2>Kategorien</h2>
+          <div class="category-grid">
+            <div class="category-card">
+              <h3>Künstler Collabs</h3>
+              <p>Einzigartige Designs von bekannten Künstlern</p>
+            </div>
+            <div class="category-card">
+              <h3>Brand Collabs</h3>
+              <p>Exklusive Kooperationen mit Top-Marken</p>
+            </div>
+            <div class="category-card">
+              <h3>Limited Edition</h3>
+              <p>Seltene und limitierte Auflagen</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="newsletter" class="glass-section">
+          <h2>Newsletter</h2>
+          <p>
+            Bleiben Sie informiert über neue Collaborations und exklusive
+            Angebote
+          </p>
+          <form id="newsletter-form" class="glass-form">
+            <input type="email" placeholder="Ihre E-Mail-Adresse" required />
+            <button type="submit" class="btn">Anmelden</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="glass-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Über uns</h3>
+            <p>Ihr Experte für exklusive Crocs Collaborations</p>
+          </div>
+          <div class="footer-section">
+            <h3>Kontakt</h3>
+            <p>Email: info@crocs-collabs.ch</p>
+            <p>Tel: +41 44 123 45 67</p>
+          </div>
+          <div class="footer-section">
+            <h3>Folgen Sie uns</h3>
+            <div class="social-links">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; 2024 Crocs Collabs. Alle Rechte vorbehalten.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
