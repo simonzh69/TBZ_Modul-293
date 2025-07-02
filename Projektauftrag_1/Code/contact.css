@@ -1,0 +1,67 @@
+.page-container {
+  max-width: 960px;
+  padding: 0 1rem;
+}
+.page-header {
+  padding: 1rem 0;
+}
+.page-subtitle {
+  max-width: 600px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.team-card {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.team-card-avatar {
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.team-card-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.team-card-role {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  align-self: center;
+}
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+.form-actions {
+  display: flex;
+  padding: 0.75rem 0;
+  justify-content: flex-end;
+}
