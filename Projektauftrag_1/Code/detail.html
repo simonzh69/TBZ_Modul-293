@@ -7,289 +7,155 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="pageTitle">Product Detail - Collab Crocs</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,aspect-ratio"></script>
-     <style>
-      :root {
-        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(184,157,159)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="detail.css" />
   </head>
   <body>
-    <div
-      class="relative flex size-full min-h-screen flex-col bg-[#181111] dark group/design-root overflow-x-hidden"
-      style='font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;'
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#382929] px-4 sm:px-6 md:px-10 py-3">
-          <a href="explore.html" class="flex items-center gap-2 sm:gap-4 text-white">
-            <div class="size-4 sm:size-5">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="layout-container">
+      <header class="header">
+        <a href="explore.html" class="logo-link">
+          <div class="logo-icon">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="logo-text">Collab Crocs</h2>
+        </a>
+        <div class="header-actions">
+          <nav class="nav-desktop">
+            <a class="nav-link" href="explore.html">Home</a>
+            <a class="nav-link" href="index.html">Shop All</a>
+            <a class="nav-link" href="index.html?filter=new">New Arrivals</a>
+            <a class="nav-link" href="index.html?filter=sale">Sale</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </nav>
+          <div class="header-icon-buttons">
+            <button class="icon-button" aria-label="User Account">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+              >
                 <path
-                  d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
-                  fill="currentColor"
+                  d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
                 ></path>
               </svg>
-            </div>
-            <h2 class="text-white text-md sm:text-lg font-bold leading-tight tracking-[-0.015em]">Collab Crocs</h2>
-          </a>
-          <div class="flex flex-1 justify-end items-center gap-2 sm:gap-4 md:gap-8">
-            <nav class="hidden md:flex items-center gap-4 lg:gap-9">
-              <a class="text-white text-sm font-medium leading-normal hover:text-[#e92932]" href="explore.html">Home</a>
-              <a class="text-white text-sm font-medium leading-normal hover:text-[#e92932]" href="index.html">Shop All</a>
-              <a class="text-white text-sm font-medium leading-normal hover:text-[#e92932]" href="index.html?filter=new">New Arrivals</a>
-              <a class="text-white text-sm font-medium leading-normal hover:text-[#e92932]" href="index.html?filter=sale">Sale</a>
-              <a class="text-white text-sm font-medium leading-normal hover:text-[#e92932]" href="contact.html">Contact</a>
-            </nav>
-            <div class="flex gap-2">
-                 <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#533c3d]"
-                 onclick="window.location.href='index.html'"
-                 aria-label="Search Products"
+            </button>
+            <button class="icon-button" aria-label="Shopping Bag">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
               >
-                <div class="text-white" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" sm:width="20px" sm:height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-              <button
-                class="hidden sm:flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#533c3d]"
-                aria-label="User Account"
-              >
-                <div class="text-white" data-icon="User" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" sm:width="20px" sm:height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#533c3d]"
-                aria-label="Shopping Bag"
-              >
-                <div class="text-white" data-icon="ShoppingBag" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" sm:width="20px" sm:height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-            </div>
-             <button id="mobileMenuButton" aria-label="Open Menu" class="md:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-9 sm:h-10 w-9 sm:w-10 bg-[#382929] text-white hover:bg-[#533c3d]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,88H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                <path
+                  d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
+                ></path>
+              </svg>
             </button>
           </div>
-        </header>
-        <nav id="mobileMenu" class="hidden md:hidden bg-[#261c1c] p-4 text-center">
-            <a class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]" href="explore.html">Home</a>
-            <a class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]" href="index.html">Shop All</a>
-            <a class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]" href="index.html?filter=new">New Arrivals</a>
-            <a class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]" href="index.html?filter=sale">Sale</a>
-            <a class="block py-3 text-white text-base font-medium leading-normal hover:text-[#e92932]" href="contact.html">Contact</a>
-        </nav>
+          <button
+            id="mobileMenuButton"
+            aria-label="Open Menu"
+            class="mobile-menu-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20px"
+              height="20px"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,88H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <nav id="mobileMenu" class="mobile-menu">
+        <a class="mobile-nav-link" href="explore.html">Home</a>
+        <a class="mobile-nav-link" href="index.html">Shop All</a>
+        <a class="mobile-nav-link" href="index.html?filter=new"
+          >New Arrivals</a
+        >
+        <a class="mobile-nav-link" href="index.html?filter=sale">Sale</a>
+        <a class="mobile-nav-link" href="contact.html">Contact</a>
+      </nav>
 
-        <main class="px-4 sm:px-6 md:px-10 lg:px-20 flex flex-1 justify-center py-5">
-          <div id="productDetailContainerOuter" class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            
-            <div id="breadcrumbsContainer" class="flex flex-wrap gap-x-1 sm:gap-x-2 p-4 text-xs sm:text-sm md:text-base">
+      <main class="main-content">
+        <div class="content-wrapper page-container">
+          <div id="breadcrumbsContainer" class="breadcrumbs"></div>
+
+          <div id="productDetailContent" class="product-detail-grid">
+            <div class="product-image-wrapper">
+              <img id="productImage" src="" alt="Product Image" />
             </div>
+            <div class="product-info">
+              <h1 id="productName" class="product-title"></h1>
+              <p id="productDescription" class="product-description"></p>
+              <p id="productPrice" class="product-price"></p>
 
-            <div id="productDetailContent" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 p-4">
-                <div class="w-full">
-                    <img id="productImage" src="" alt="Product Image" class="w-full aspect-square object-contain rounded-xl shadow-lg bg-[#261c1c]">
+              <form id="orderForm" class="order-form">
+                <div class="order-form-fields">
+                  <label class="form-label">
+                    <p>Select Size</p>
+                    <select id="productSize" required class="form-select"></select>
+                  </label>
+                  <label class="form-label">
+                    <p>Quantity</p>
+                    <input
+                      id="productQuantity"
+                      type="number"
+                      value="1"
+                      min="1"
+                      required
+                      class="form-input"
+                    />
+                  </label>
                 </div>
-                <div class="flex flex-col">
-                    <h1 id="productName" class="text-white text-xl sm:text-2xl md:text-[28px] font-bold leading-tight tracking-[-0.015em] pb-2 sm:pb-3 pt-2"></h1>
-                    <p id="productDescription" class="text-[#b89d9f] text-sm sm:text-base font-normal leading-relaxed pb-3 sm:pb-4"></p>
-                    <p id="productPrice" class="text-white text-xl sm:text-2xl font-bold leading-normal pb-4 sm:pb-6"></p>
-                    
-                    <form id="orderForm">
-                        <div class="flex flex-col gap-4">
-                            <label class="flex flex-col min-w-40 flex-1">
-                                <p class="text-white text-sm sm:text-base font-medium leading-normal pb-2">Select Size</p>
-                                <select
-                                id="productSize"
-                                required
-                                class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#533c3d] bg-[#261c1c] focus:border-[#533c3d] h-12 sm:h-14 bg-[image:var(--select-button-svg)] placeholder:text-[#b89d9f] p-3 sm:p-[15px] text-sm sm:text-base font-normal leading-normal appearance-none"
-                                style="background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.5em 1.5em;"
-                                >
-                                </select>
-                            </label>
-                            <label class="flex flex-col min-w-40 flex-1">
-                                <p class="text-white text-sm sm:text-base font-medium leading-normal pb-2">Quantity</p>
-                                <input
-                                id="productQuantity"
-                                type="number"
-                                value="1"
-                                min="1"
-                                required
-                                placeholder="Quantity"
-                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border border-[#533c3d] bg-[#261c1c] focus:border-[#533c3d] h-12 sm:h-14 placeholder:text-[#b89d9f] p-3 sm:p-[15px] text-sm sm:text-base font-normal leading-normal"
-                                />
-                            </label>
-                        </div>
-                        <div class="flex pt-5 sm:pt-6 pb-3 justify-start">
-                        <button
-                            type="submit"
-                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e92932] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#c32029]"
-                        >
-                            <span class="truncate">Add to Bag</span>
-                        </button>
-                        </div>
-                    </form>
+                <div class="order-form-actions">
+                  <button type="submit" class="button-primary add-to-bag-btn">
+                    <span>Add to Bag</span>
+                  </button>
                 </div>
-            </div>
-            
-            <div id="productNotFound" class="hidden text-center p-10">
-                <h2 class="text-white text-xl sm:text-2xl font-bold">Product Not Found</h2>
-                <p class="text-[#b89d9f] mt-2 text-sm sm:text-base">Sorry, the product you are looking for does not exist.</p>
-                <a href="index.html" class="mt-4 inline-block bg-[#e92932] text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-[#c32029]">Back to Products</a>
-            </div>
-
-          </div>
-        </main>
-        <footer class="flex justify-center border-t border-solid border-t-[#382929]">
-          <div class="flex w-full max-w-[960px] flex-1 flex-col">
-            <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white" href="#">About Us</a>
-                <a class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white" href="contact.html">Contact</a>
-                <a class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white" href="#">Privacy Policy</a>
-                <a class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal min-w-32 sm:min-w-40 hover:text-white" href="#">Terms of Service</a>
-              </div>
-              <p class="text-[#b89d9f] text-sm sm:text-base font-normal leading-normal">© 2024 Collab Crocs. All rights reserved.</p>
+              </form>
             </div>
           </div>
-        </footer>
-      </div>
+
+          <div id="productNotFound" class="product-not-found">
+            <h2 class="page-title">Product Not Found</h2>
+            <p class="page-subtitle">
+              Sorry, the product you are looking for does not exist.
+            </p>
+            <a href="index.html" class="button-primary back-button"
+              >Back to Products</a
+            >
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a class="footer-link" href="#">About Us</a>
+            <a class="footer-link" href="contact.html">Contact</a>
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms of Service</a>
+          </div>
+          <p class="footer-copyright">
+            © 2024 Collab Crocs. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="products.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const params = new URLSearchParams(window.location.search);
-        const productId = params.get('id');
-        const product = products.find(p => p.id === productId);
-
-        const pageTitle = document.getElementById('pageTitle');
-        const breadcrumbsContainer = document.getElementById('breadcrumbsContainer');
-        const productImageEl = document.getElementById('productImage');
-        const productNameEl = document.getElementById('productName');
-        const productDescriptionEl = document.getElementById('productDescription');
-        const productPriceEl = document.getElementById('productPrice');
-        const productSizeSelect = document.getElementById('productSize');
-        const productNotFoundDiv = document.getElementById('productNotFound');
-        const productDetailContentDiv = document.getElementById('productDetailContent');
-
-
-        if (product) {
-          pageTitle.textContent = `${product.name} - Collab Crocs`;
-          productNameEl.textContent = product.name;
-          productImageEl.src = product.image;
-          productImageEl.alt = product.name;
-          productDescriptionEl.textContent = product.description;
-          productPriceEl.textContent = product.price;
-
-          if (product.breadcrumbs && breadcrumbsContainer) {
-            breadcrumbsContainer.innerHTML = '';
-            product.breadcrumbs.forEach((crumb, index) => {
-                if (index > 0) {
-                    const separator = document.createElement('span');
-                    separator.className = 'text-[#b89d9f] font-medium leading-normal px-1';
-                    separator.textContent = '/';
-                    breadcrumbsContainer.appendChild(separator);
-                }
-                if (crumb.link && index < product.breadcrumbs.length -1) {
-                    const link = document.createElement('a');
-                    link.href = crumb.link;
-                    link.className = 'text-[#b89d9f] font-medium leading-normal hover:text-white';
-                    link.textContent = crumb.name;
-                    breadcrumbsContainer.appendChild(link);
-                } else {
-                    const span = document.createElement('span');
-                    span.className = 'text-white font-medium leading-normal';
-                    span.textContent = crumb.name;
-                    breadcrumbsContainer.appendChild(span);
-                }
-            });
-          }
-
-
-          if (product.sizes && product.sizes.length > 0) {
-            productSizeSelect.innerHTML = '<option value="">Select Size</option>'; 
-            product.sizes.forEach(size => {
-              const option = document.createElement('option');
-              option.value = size;
-              option.textContent = size;
-              productSizeSelect.appendChild(option);
-            });
-            productSizeSelect.disabled = false;
-            productSizeSelect.required = true;
-          } else {
-            productSizeSelect.innerHTML = '<option value="N/A">Size not applicable</option>';
-            productSizeSelect.disabled = true;
-            productSizeSelect.required = false;
-          }
-
-          productNotFoundDiv.classList.add('hidden');
-          productDetailContentDiv.classList.remove('hidden');
-
-
-        } else {
-          breadcrumbsContainer.innerHTML = '';
-          productDetailContentDiv.classList.add('hidden');
-          productNotFoundDiv.classList.remove('hidden');
-          pageTitle.textContent = 'Product Not Found - Collab Crocs';
-
-        }
-
-        const orderForm = document.getElementById('orderForm');
-        if (orderForm) {
-            orderForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const selectedSize = document.getElementById('productSize').value;
-            const quantity = document.getElementById('productQuantity').value;
-
-            if (product && parseInt(quantity) > 0) {
-                if(product.sizes && product.sizes.length > 0 && !selectedSize){
-                     alert('Please select a size.');
-                     return;
-                }
-                let message = `Added ${quantity} of ${product.name}`;
-                if (selectedSize && selectedSize !== "N/A" && selectedSize !== "") {
-                    message += ` (Size: ${selectedSize})`;
-                }
-                message += ` to bag!`;
-                alert(message);
-                this.reset(); 
-                if (product.sizes && product.sizes.length > 0) {
-                     productSizeSelect.value = ""; 
-                } else {
-                     productSizeSelect.value = "N/A";
-                }
-                document.getElementById('productQuantity').value = "1";
-            } else if (!product) {
-                 alert('Error: Product details not loaded.');
-            } else if (parseInt(quantity) <= 0) {
-                 alert('Please enter a valid quantity (at least 1).');
-            }
-            });
-        }
-      });
-
-      const mobileMenuButton = document.getElementById('mobileMenuButton');
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-    </script>
+    <script src="detail.js"></script>
   </body>
 </html>
