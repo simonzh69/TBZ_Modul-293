@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  document
-    .getElementById("newsletterForm")
-    .addEventListener("submit", function (event) {
+  var newsletterForm = document.getElementById("newsletterForm");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", function (event) {
       event.preventDefault();
       const emailInput = document.getElementById("newsletterEmail");
       if (emailInput.value && emailInput.checkValidity()) {
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Please enter a valid email address.");
       }
     });
+  }
 
   const mobileMenuButton = document.getElementById("mobileMenuButton");
   const mobileMenu = document.getElementById("mobileMenu");
