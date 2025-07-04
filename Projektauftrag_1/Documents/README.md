@@ -1,70 +1,112 @@
 # Webshop Projekt: Collab Crocs
 
-Dies ist ein Webshop für exklusive Crocs-Kollaborationen, erstellt im Rahmen des Projektauftrags "Webshop mit KI-gestützter Webentwicklung".
+Dies ist ein Webshop für exklusive Crocs-Kollaborationen. Das Projekt wurde im Rahmen des Moduls 293 erstellt.
 
-**Live-Demo:** [Link zur veröffentlichten Webseite hier einfügen]
-**Git-Repository:** [Link zum GitHub-Repository hier einfügen]
+**Link zur Seite:** https://taupe-hummingbird-26b767.netlify.app/
+
+**Git-Repository:** https://github.com/simonzh69/TBZ_Modul-293.git
 
 ## Projektbeschreibung
 
-Der "Collab Crocs" Webshop präsentiert eine kuratierte Auswahl an limitierten und exklusiven Crocs-Kollaborationen. Er wurde mit einem Fokus auf eine moderne "Dark Mode"-Ästhetik entwickelt und vollständig ohne CSS-Frameworks umgesetzt. Das Projekt nutzt reines JavaScript für alle dynamischen Funktionen wie Produktfilterung und -suche.
+Der Webshop verkauft Crocs von Crocs-Collabs und hat ein einfaches, gleichzeitig aber edles und modernes Design. Es basiert auf reinem HTML, CSS und JavaScript.  
 
-## Designprozess & Assets
+## Designprozess
 
-Der Designprozess war ein mehrstufiger Weg von der Idee bis zum Code, um eine hochwertige und benutzerfreundliche Oberfläche zu schaffen.
+Der visuelle Entwurf des Projekts wurde vor der Umsetzung geplant.
 
 -   **Wireframes (Miro):** [Link zum Miro Board](https://miro.com/welcomeonboard/S0JYUjA0dmszRUNtUmlkT2pwRENYeGtFeHVnMStXZHFBMEk0OEdPU3hvZ1A0UzlwS1pZUzNNUS9qa1VwTDM1ZXhNR2VOVkgyaWtsN0t1UW9IOWdyb1dHN2VnYXdrVXoxUG54UldHaXFTb3NwWlpOMlFEMjZuN1RweDBwWVV4dDdBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=534214743377)
 -   **Mockups (Figma):** [Link zum Figma Design](https://www.figma.com/design/1vWpDApHHGkOuF9Iku6xPI/M293-Projektauftrag?node-id=0-1&t=KZtsGPj0DVuU7qzX-1)
 
 ## Technologie-Stack
 
--   **HTML5, CSS3 (Grid & Flexbox), Vanilla JavaScript**
+-   HTML5
+-   CSS3 (Grid & Flexbox)
+-   Vanilla JavaScript
 
 ## Dokumentation des KI-Einsatzes
 
-Künstliche Intelligenz, primär **Google AI Studio** und der **Cursor Editor**, war ein zentraler Partner im Entwicklungsprozess. Ich verfolgte eine klare Strategie: Grosse Aufgaben wurden mit umfangreichen Prompts an die KI delegiert, gefolgt von manuellen Tests, gezielten Korrektur-Prompts und eigenhändigen Verbesserungen.
+Ich habe KI-Tools (primär Google AI Studio und den Cursor Editor) als Entwicklungspartner genutzt. Meine Vorgehensweise war, grosse Aufgaben mit detaillierten Prompts an die KI zu delegieren und die Ergebnisse anschliessend manuell zu testen und zu verfeinern.
 
-### 1. Generierung der Grundstruktur
+### 1. KI-Prompts zur Generierung der Seiten
 
-Zuerst nutzte ich Google AI Studio wegen des grossen Kontextfensters, um die Basis für jede Seite zu erstellen. Ich lieferte die gesamte Projektstruktur und meine Design-Mockups als Kontext.
+Hier sind die zentralen Prompts, die ich verwendet habe, um die Basis jeder Seite zu erstellen. Als Kontext habe ich der KI immer meine Figma-Mockups und die bestehende Projektstruktur zur Verfügung gestellt.
 
--   **Beispiel eines Haupt-Prompts (für `index.html`):**
-    > "Act as a senior full-stack web developer. Your task is to create the complete code for a product listing page for an e-commerce website called 'Collab Crocs'.
-    >
-    > **Context & Project Structure:** I'm providing you with the full project file structure, my Figma mockup visuals, and the `products.js` data file. The website uses a dark theme. The primary CSS file will be `style.css` for global styles and `index.css` for page-specific layouts. NO CSS FRAMEWORKS like Tailwind or Bootstrap are allowed. Use pure CSS with semantic class names, CSS Grid, and Flexbox. All dynamic content rendering, filtering, and searching must be handled with vanilla JavaScript in `index.js`.
-    >
-    > **Page: `index.html`**
-    > Create the complete HTML, CSS, and JavaScript for this page.
-    > 1.  **HTML (`index.html`):** Create the structure based on the mockup. Include a header, a filter bar section, a grid container for products (`id="productGrid"`), and a footer.
-    > 2.  **CSS (`style.css` & `index.css`):** Generate the CSS. Global styles for the header, footer, and buttons go into `style.css`. Page-specific styles for the filter bar and the product grid go into `index.css`. The layout must be responsive for mobile, tablet, and desktop.
-    > 3.  **JavaScript (`index.js`):** Write the script to dynamically fetch products from `products.js` and render them into `#productGrid`. Implement a filter logic that listens to clicks on the filter buttons and re-renders the grid. Also, implement a live search functionality tied to the search input fields.
-    >
-    > Ensure the code is clean, well-structured, and production-ready."
+---
 
-### 2. Manuelle Überarbeitung und KI-gestützte Korrekturen
+#### **Prompt für die Startseite (Explore Page)**
 
-Der von der KI generierte Code war eine solide Basis, erforderte aber gezielte Nacharbeit. Nach jeder Generierung führte ich manuelle Tests durch und identifizierte Fehler.
+> **Task:** Create the complete code for the **Explore Page (Homepage)** of the 'Collab Crocs' website.
+>
+> **Page Description:** This is the main landing page. It should be visually engaging and guide users to key areas of the site. It features a large hero section, a carousel for new products, a grid for categories, and a newsletter signup form. The design must be modern, dark-themed, and responsive.
+>
+> **Requirements:**
+> 1.  **HTML (`explore.html`):** Create the structure including a `<header>`, `<main>`, and `<footer>`. The main section must contain:
+>     -   A full-width hero section with a background image, a heading, and a "Shop All" button.
+>     -   A "New Products" section with a horizontally scrollable container with the ID `featuredProductsContainer`.
+>     -   A "Shop by Category" section with a 3-column responsive grid for category links.
+>     -   A newsletter form with the ID `newsletterForm`.
+> 2.  **CSS (`style.css` & `explore.css`):** Use pure CSS without frameworks. Global styles (header, footer, buttons) go into `style.css`. Page-specific styles for the hero section and category grid go into `explore.css`. The layout must adapt from a single column on mobile to a multi-column layout on desktop, as per the mockup.
+> 3.  **JavaScript (`explore.js`):** Write a script to dynamically load products from `products.js` (only those with category 'new') into the `#featuredProductsContainer`. Add an event listener to `#newsletterForm` to show an alert on submit. Implement the mobile menu toggle.
 
-**Beispiele für aufgetretene Fehler und deren Behebung:**
+---
 
--   **Fehler 1: Fehlerhaftes Grid-Layout auf mobilen Geräten.**
-    -   **Problem:** Das von der KI erstellte Produkt-Grid brach auf kleinen Bildschirmen nicht korrekt in eine einzelne Spalte um.
-    -   **Korrektur-Ansatz:** Ich isolierte den fehlerhaften CSS-Code und gab ihn an Cursor mit einem präzisen Prompt.
-    -   **Beispiel-Prompt für Cursor:**
-        > "Here is the CSS for my `.product-grid`. It's using `grid-template-columns: repeat(4, 1fr)`. This breaks on mobile. Fix it by using a mobile-first approach. It should be a single column by default, two columns on screens wider than 480px, and four columns on screens wider than 1024px."
+#### **Prompt für die Produktübersicht (Index Page)**
 
--   **Fehler 2: Filter-Buttons blieben nicht aktiv.**
-    -   **Problem:** Nach dem Klick auf einen Filter-Button wurde dieser nicht visuell als "aktiv" markiert. Die JavaScript-Logik zur Zuweisung der `.active`-Klasse fehlte.
-    -   **Korrektur-Ansatz:** Manuelle Implementierung. Ich habe die `updateActiveButton`-Funktion in `index.js` selbst geschrieben, da dies schneller war, als es der KI zu erklären.
+> **Task:** Create the complete code for the **Index Page (Product Listing Page)**.
+>
+> **Page Description:** This page displays all products in a grid. Users must be able to filter these products by category and search for them. The layout should be clean and functional, allowing for easy browsing.
+>
+> **Requirements:**
+> 1.  **HTML (`index.html`):** Structure the page with a header, a filter bar, a product grid container with the ID `productGrid`, and a footer. The filter bar should contain buttons with `data-filter` attributes.
+> 2.  **CSS (`style.css` & `index.css`):** Use pure CSS. Page-specific styles for the filter bar and the responsive product grid (2 columns on mobile, 4 on desktop) go into `index.css`.
+> 3.  **JavaScript (`index.js`):** Write a script to:
+>     -   Dynamically render all products from `products.js` into `#productGrid`.
+>     -   Implement a filter logic that listens to clicks on `.filter-button` and re-renders the grid.
+>     -   Implement a live search that filters products based on input from `#searchInput` and `#searchInputMobile`.
+>     -   Handle the mobile menu and mobile search bar visibility.
 
--   **Fehler 3: Langgezogene Bilder auf der Startseite.**
-    -   **Problem:** Die Produktkarten im horizontalen Scroller auf `explore.html` wurden in die Länge gezogen, weil der Textname nicht umbrach.
-    -   **Korrektur-Ansatz:** Diesen visuellen Glitch habe ich direkt im CSS korrigiert, indem ich `white-space: normal;` und `word-break: break-word;` zu den entsprechenden Klassen in `style.css` hinzugefügt habe.
+---
 
-Dieser iterative Prozess – **KI-Generierung → Manueller Test → Gezielte Korrektur (KI oder manuell)** – war der Schlüssel zum Erfolg. Durch die Kombination von gross angelegten KI-Anweisungen und präzisen, eigenständigen Anpassungen konnte ich sowohl die Entwicklungsgeschwindigkeit maximieren als auch eine hohe Code-Qualität sicherstellen.
+#### **Prompt für die Produktdetailseite (Detail Page)**
+
+> **Task:** Create the complete code for the **Product Detail Page**.
+>
+> **Page Description:** This page provides detailed information about a single, specific product. It features a two-column layout on desktop (image and info side-by-side) and a stacked layout on mobile. The user can select a size and quantity to order.
+>
+> **Requirements:**
+> 1.  **HTML (`detail.html`):** The structure must include a breadcrumbs container and a main content area. Use specific IDs like `#productImage`, `#productName`, `#productPrice`, `#productDescription`, and an order form with the ID `orderForm`.
+> 2.  **CSS (`style.css` & `detail.css`):** Use pure CSS. Page-specific styles for the two-column layout and product typography go into `detail.css`.
+> 3.  **JavaScript (`detail.js`):** Write a script that:
+>     -   Reads a product ID from the URL query parameter (`?id=...`).
+>     -   Finds the matching product in the `products.js` array.
+>     -   Dynamically populates all HTML elements (image, name, price, etc.) with the product's data.
+>     -   Populates the size dropdown (`#productSize`) with the product's available sizes.
+>     -   Handles the `#orderForm` submission with a confirmation alert.
+
+---
+
+#### **Prompt für die Kontaktseite (Contact Page)**
+
+> **Task:** Create the complete code for the **Contact Page**.
+>
+> **Page Description:** This is a simple, professional page for user inquiries. It includes information about the team and a functional contact form. The layout should be clean and easy to navigate.
+>
+> **Requirements:**
+> 1.  **HTML (`contact.html`):** Structure the page to include:
+>     -   A title and an introduction.
+>     -   An "Our Team" section with a simple grid for team member cards.
+>     -   A contact form with the ID `contactForm`, containing fields for Name, Email, a Subject dropdown, and a Message textarea.
+> 2.  **CSS (`style.css` & `contact.css`):** Use pure CSS. Page-specific styles for the team grid and the form layout go into `contact.css`.
+> 3.  **JavaScript (`contact.js`):** Add an event listener to `#contactForm` to validate the fields and show a confirmation alert on submit. Implement the mobile menu toggle.
+
+---
+
+### 2. Manuelle Überarbeitung und Korrekturen
+
+Der von der KI generierte Code war eine gute Basis, erforderte aber manuelle Nacharbeit. Ich habe jede Ausgabe getestet und Fehler korrigiert. Manchmal habe ich die KI mit präzisen Prompts zur Fehlerbehebung genutzt, manchmal habe ich die Fehler direkt im Code behoben. Dieser iterative Prozess aus KI-Generierung und manueller Kontrolle war entscheidend für die Qualität des Endprodukts.
 
 ## Setup
 
 Um das Projekt lokal auszuführen:
-1.  Klone das Repository: `git clone https://github.com/DEIN_BENUTZERNAME/DEIN_REPO.git`
-3.  Öffne eine der `.html`-Dateien (z.B. `explore.html`) in deinem Webbrowser oder verwende einen LiveServer.
+1.  Klone das Repository.
+2.  Öffne eine der `.html`-Dateien (z.B. `explore.html`) in deinem Webbrowser oder verwende einen Live-Server.

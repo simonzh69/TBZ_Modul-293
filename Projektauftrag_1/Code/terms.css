@@ -1,0 +1,56 @@
+/* Terms of Service Page Custom Styles - Stacked Layout */
+.terms-service {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: stretch;
+  background: none;
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+.terms-title {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+.terms-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.terms-section:last-child {
+  border-bottom: none;
+}
+.terms-section h2 {
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.terms-section ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0 0;
+}
+.terms-section li {
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+.terms-section a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.terms-section a:hover {
+  color: var(--accent-primary-hover);
+}

@@ -1,17 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Collab Crocs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="privacy.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="pageTitle">Product Detail - Collab Crocs</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="detail.css" />
   </head>
   <body>
     <div class="layout-container">
@@ -81,61 +87,51 @@
         <a class="mobile-nav-link" href="index.html?filter=sale">Sale</a>
         <a class="mobile-nav-link" href="contact.html">Contact</a>
       </nav>
-
-      <main class="main-content">
-        <div class="content-wrapper page-container">
-          <div id="breadcrumbsContainer" class="breadcrumbs"></div>
-
-          <div id="productDetailContent" class="product-detail-grid">
-            <div class="product-image-wrapper">
-              <img id="productImage" src="" alt="Product Image" />
-            </div>
-            <div class="product-info">
-              <h1 id="productName" class="product-title"></h1>
-              <p id="productDescription" class="product-description"></p>
-              <p id="productPrice" class="product-price"></p>
-
-              <form id="orderForm" class="order-form">
-                <div class="order-form-fields">
-                  <label class="form-label">
-                    <p>Select Size</p>
-                    <select
-                      id="productSize"
-                      required
-                      class="form-select"
-                    ></select>
-                  </label>
-                  <label class="form-label">
-                    <p>Quantity</p>
-                    <input
-                      id="productQuantity"
-                      type="number"
-                      value="1"
-                      min="1"
-                      required
-                      class="form-input"
-                    />
-                  </label>
-                </div>
-                <div class="order-form-actions">
-                  <button type="submit" class="button-primary add-to-bag-btn">
-                    <span>Add to Bag</span>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div id="productNotFound" class="product-not-found">
-            <h2 class="page-title">Product Not Found</h2>
-            <p class="page-subtitle">
-              Sorry, the product you are looking for does not exist.
-            </p>
-            <a href="index.html" class="button-primary back-button"
-              >Back to Products</a
-            >
-          </div>
-        </div>
+      <main class="main-content page-container privacy-policy">
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <section class="privacy-section">
+          <h2>Introduction</h2>
+          <p>
+            At Collab Crocs, your privacy is important to us. This Privacy
+            Policy explains how we collect, use, and protect your information
+            when you use our website.
+          </p>
+        </section>
+        <section class="privacy-section">
+          <h2>Information We Collect</h2>
+          <ul>
+            <li>
+              Personal identification information (Name, email address, etc.)
+            </li>
+            <li>Usage data (pages visited, time spent, etc.)</li>
+            <li>Cookies and tracking technologies</li>
+          </ul>
+        </section>
+        <section class="privacy-section">
+          <h2>How We Use Your Information</h2>
+          <ul>
+            <li>To provide and maintain our service</li>
+            <li>To notify you about changes to our service</li>
+            <li>To allow you to participate in interactive features</li>
+            <li>To provide customer support</li>
+            <li>To gather analysis to improve our website</li>
+          </ul>
+        </section>
+        <section class="privacy-section">
+          <h2>Your Rights</h2>
+          <p>
+            You have the right to access, update, or delete your personal
+            information. Contact us at <a href="contact.html">Contact</a> for
+            any privacy-related requests.
+          </p>
+        </section>
+        <section class="privacy-section">
+          <h2>Contact Us</h2>
+          <p>
+            If you have any questions about this Privacy Policy, please
+            <a href="contact.html">contact us</a>.
+          </p>
+        </section>
       </main>
       <footer class="footer">
         <div class="footer-content">
@@ -150,7 +146,5 @@
         </div>
       </footer>
     </div>
-    <script src="products.js"></script>
-    <script src="detail.js"></script>
   </body>
 </html>
