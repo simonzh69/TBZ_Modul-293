@@ -1,21 +1,36 @@
 # Webshop Projekt: Collab Crocs
 
-Dies ist ein Webshop für exklusive Crocs-Kollaborationen. Das Projekt wurde im Rahmen des Moduls 293 erstellt.
+Dies ist ein Webshop für exklusive Crocs-Kollaborationen, erstellt im Rahmen des Projektauftrags "Webshop mit KI-gestützter Webentwicklung".
 
-**Link zur Seite:** https://taupe-hummingbird-26b767.netlify.app/
-
-**Git-Repository:** https://github.com/simonzh69/TBZ_Modul-293.git
+**Live-Demo:** [https://taupe-hummingbird-26b767.netlify.app/](https://taupe-hummingbird-26b767.netlify.app/)
+**Git-Repository:** [https://github.com/simonzh69/TBZ_Modul-293.git](https://github.com/simonzh69/TBZ_Modul-293.git)
 
 ## Projektbeschreibung
 
-Der Webshop verkauft Crocs von Crocs-Collabs und hat ein einfaches, gleichzeitig aber edles und modernes Design. Es basiert auf reinem HTML, CSS und JavaScript.  
+Der "Collab Crocs" Webshop ist eine Plattform für limitierte Crocs-Kollaborationen. Die Seite hat ein modernes, dunkles Design und wurde komplett ohne CSS-Frameworks wie Bootstrap oder Tailwind erstellt. Alle dynamischen Funktionen, wie die Produktfilterung, werden von reinem JavaScript gesteuert.
 
-## Designprozess
+## Designprozess und Wireframes
 
-Der visuelle Entwurf des Projekts wurde vor der Umsetzung geplant.
+Bevor ich mit dem Coden anfing, habe ich das Design genau geplant. Der Prozess folgte einem klaren Weg vom Groben zum Detail:
 
--   **Wireframes (Miro):** [Link zum Miro Board](https://miro.com/welcomeonboard/S0JYUjA0dmszRUNtUmlkT2pwRENYeGtFeHVnMStXZHFBMEk0OEdPU3hvZ1A0UzlwS1pZUzNNUS9qa1VwTDM1ZXhNR2VOVkgyaWtsN0t1UW9IOWdyb1dHN2VnYXdrVXoxUG54UldHaXFTb3NwWlpOMlFEMjZuN1RweDBwWVV4dDdBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=534214743377)
--   **Mockups (Figma):** [Link zum Figma Design](https://www.figma.com/design/1vWpDApHHGkOuF9Iku6xPI/M293-Projektauftrag?node-id=0-1&t=KZtsGPj0DVuU7qzX-1)
+1.  **Wireframes (Miro):** Zuerst habe ich in Miro einfache Skizzen (Wireframes) erstellt, um die grundlegende Struktur und Anordnung der Elemente für jede Seite und für verschiedene Bildschirmgrössen (Mobile, Desktop) festzulegen. [Link zum Miro Board](https://miro.com/welcomeonboard/S0JYUjA0dmszRUNtUmlkT2pwRENYeGtFeHVnMStXZHFBMEk0OEdPU3hvZ1A0UzlwS1pZUzNNUS9qa1VwTDM1ZXhNR2VOVkgyaWtsN0t1UW9IOWdyb1dHN2VnYXdrVXoxUG54UldHaXFTb3NwWlpOMlFEMjZuN1RweDBwWVV4dDdBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=534214743377)
+
+2.  **Mockups (Figma):** Basierend auf den Wireframes habe ich in Figma detaillierte, farbige Entwürfe (Mockups) erstellt. Diese dienten als visuelle Vorlage für die finale Umsetzung. [Link zum Figma Design](https://www.figma.com/design/1vWpDApHHGkOuF9Iku6xPI/M293-Projektauftrag?node-id=0-1&t=KZtsGPj0DVuU7qzX-1)
+
+## Styleguide
+
+### Farben
+-   **Hintergrund (Main):** `#181111`
+-   **Hintergrund (Sekundär):** `#261c1c`
+-   **Interaktive Elemente:** `#382929`
+-   **Akzentfarbe (Primär):** `#e92932`
+-   **Text (Primär):** `#FFFFFF`
+-   **Text (Sekundär):** `#b89d9f`
+
+### Typografie
+-   **Schriftarten:** 'Be Vietnam Pro', 'Noto Sans'
+-   **Überschriften:** `font-weight: 700` oder `900`
+-   **Fliess-text:** `font-weight: 400`
 
 ## Technologie-Stack
 
@@ -25,85 +40,163 @@ Der visuelle Entwurf des Projekts wurde vor der Umsetzung geplant.
 
 ## Dokumentation des KI-Einsatzes
 
-Ich habe KI-Tools (primär Google AI Studio und den Cursor Editor) als Entwicklungspartner genutzt. Meine Vorgehensweise war, grosse Aufgaben mit detaillierten Prompts an die KI zu delegieren und die Ergebnisse anschliessend manuell zu testen und zu verfeinern.
+Mein Workflow basierte auf einem iterativen Prozess mit verschiedenen KI-Tools. Ich habe grosse, detaillierte Prompts verwendet, um eine solide Code-Basis zu generieren. Diese habe ich anschliessend manuell und mit Hilfe kleinerer, gezielter Prompts getestet, verfeinert und korrigiert.
 
-### 1. KI-Prompts zur Generierung der Seiten
+### Vergleich und Auswahl der genutzten KI-Tools
 
-Hier sind die zentralen Prompts, die ich verwendet habe, um die Basis jeder Seite zu erstellen. Als Kontext habe ich der KI immer meine Figma-Mockups und die bestehende Projektstruktur zur Verfügung gestellt.
+-   **Google AI Studio:** Meine erste Wahl für die Erstellung der ursprünglichen Code-Basis wegen des grossen Kontextfensters.
+-   **Cursor:** Das ideale Werkzeug für das Finetuning und Debugging direkt im Code.
+-   **GitHub Copilot:** Hauptsächlich als "Autovervollständigung" für sich wiederholende Code-Blöcke genutzt.
 
----
-
-#### **Prompt für die Startseite (Explore Page)**
-
-> **Task:** Create the complete code for the **Explore Page (Homepage)** of the 'Collab Crocs' website.
->
-> **Page Description:** This is the main landing page. It should be visually engaging and guide users to key areas of the site. It features a large hero section, a carousel for new products, a grid for categories, and a newsletter signup form. The design must be modern, dark-themed, and responsive.
->
-> **Requirements:**
-> 1.  **HTML (`explore.html`):** Create the structure including a `<header>`, `<main>`, and `<footer>`. The main section must contain:
->     -   A full-width hero section with a background image, a heading, and a "Shop All" button.
->     -   A "New Products" section with a horizontally scrollable container with the ID `featuredProductsContainer`.
->     -   A "Shop by Category" section with a 3-column responsive grid for category links.
->     -   A newsletter form with the ID `newsletterForm`.
-> 2.  **CSS (`style.css` & `explore.css`):** Use pure CSS without frameworks. Global styles (header, footer, buttons) go into `style.css`. Page-specific styles for the hero section and category grid go into `explore.css`. The layout must adapt from a single column on mobile to a multi-column layout on desktop, as per the mockup.
-> 3.  **JavaScript (`explore.js`):** Write a script to dynamically load products from `products.js` (only those with category 'new') into the `#featuredProductsContainer`. Add an event listener to `#newsletterForm` to show an alert on submit. Implement the mobile menu toggle.
+**Mein finaler Workflow:** Die Kombination aus **Google AI Studio** für den grossen Entwurf und **Cursor** für die iterative Verfeinerung erwies sich als die produktivste Methode.
 
 ---
 
-#### **Prompt für die Produktübersicht (Index Page)**
+### Prompts zur Seitenerstellung und nachfolgende Anpassungen
 
-> **Task:** Create the complete code for the **Index Page (Product Listing Page)**.
->
-> **Page Description:** This page displays all products in a grid. Users must be able to filter these products by category and search for them. The layout should be clean and functional, allowing for easy browsing.
->
-> **Requirements:**
-> 1.  **HTML (`index.html`):** Structure the page with a header, a filter bar, a product grid container with the ID `productGrid`, and a footer. The filter bar should contain buttons with `data-filter` attributes.
-> 2.  **CSS (`style.css` & `index.css`):** Use pure CSS. Page-specific styles for the filter bar and the responsive product grid (2 columns on mobile, 4 on desktop) go into `index.css`.
-> 3.  **JavaScript (`index.js`):** Write a script to:
->     -   Dynamically render all products from `products.js` into `#productGrid`.
->     -   Implement a filter logic that listens to clicks on `.filter-button` and re-renders the grid.
->     -   Implement a live search that filters products based on input from `#searchInput` and `#searchInputMobile`.
->     -   Handle the mobile menu and mobile search bar visibility.
+Hier sind die zentralen Prompts, die ich in **Google AI Studio** verwendet habe. Als Kontext habe ich der KI immer ein Bild meines Figma-Mockups für die jeweilige Seite zur Verfügung gestellt.
 
----
+#### **1. Haupt-Prompt: Explore Page (Homepage)**
 
-#### **Prompt für die Produktdetailseite (Detail Page)**
+"Act as a senior frontend developer. Generate the complete code for the Homepage of the 'Collab Crocs' website, based on the provided mockup image. The code must be organized into separate HTML, CSS, and JavaScript files. You must only use pure HTML, CSS (Flexbox & Grid), and vanilla JavaScript, with no external frameworks. The page must include a reusable global header and footer.
 
-> **Task:** Create the complete code for the **Product Detail Page**.
->
-> **Page Description:** This page provides detailed information about a single, specific product. It features a two-column layout on desktop (image and info side-by-side) and a stacked layout on mobile. The user can select a size and quantity to order.
->
-> **Requirements:**
-> 1.  **HTML (`detail.html`):** The structure must include a breadcrumbs container and a main content area. Use specific IDs like `#productImage`, `#productName`, `#productPrice`, `#productDescription`, and an order form with the ID `orderForm`.
-> 2.  **CSS (`style.css` & `detail.css`):** Use pure CSS. Page-specific styles for the two-column layout and product typography go into `detail.css`.
-> 3.  **JavaScript (`detail.js`):** Write a script that:
->     -   Reads a product ID from the URL query parameter (`?id=...`).
->     -   Finds the matching product in the `products.js` array.
->     -   Dynamically populates all HTML elements (image, name, price, etc.) with the product's data.
->     -   Populates the size dropdown (`#productSize`) with the product's available sizes.
->     -   Handles the `#orderForm` submission with a confirmation alert.
+Page Structure and Content:
+The page should be structured with a header, a main content area, and a footer. The main content must contain these sections in order: a full-width hero section with a large background image, a main headline "Explore the Latest in Collab Crocs", a sub-headline, and a primary button "Shop All Collections". It must also have a "New Products" section with a title and a container that will be filled with products by JavaScript. On mobile, this container must be horizontally scrollable. Another section, "Shop by Category", should be a responsive grid with three clickable cards: "Designer Collabs", "Limited Editions", and "Artist Series". Finally, include a newsletter subscription form at the bottom of the page.
+
+Functionality:
+The "New Products" section must be dynamic. The script needs to get product data from an external `products.js` file and show only products categorized as 'new'. The newsletter form must be functional and show a confirmation alert on submission, without reloading the page. The mobile navigation menu must be fully functional.
+
+Design and Styling:
+The visual design must strictly adhere to the provided mockup. The CSS should use CSS variables for the color palette.
+-   Main Background: `#181111`
+-   Secondary Background (for cards, containers): `#261c1c`
+-   Interactive Elements (inputs, buttons idle state): `#382929`
+-   Primary Accent (main buttons, active links, highlights): `#e92932`
+-   Primary Text (headlines, main copy): `#FFFFFF`
+-   Secondary Text (sub-headlines, placeholders): `#b89d9f`
+The primary fonts are 'Be Vietnam Pro' and 'Noto Sans'. Headings must be bold (font-weight 700 or 900), and body text regular (font-weight 400). The layout must be fully responsive, transitioning from a single-column on mobile to a multi-column design on desktop."
+
+**Anpassungen nach der Generierung:**
+-   **Problem:** Das "New Products"-Karussell war auf mobilen Geräten nicht horizontal scrollbar.
+-   **Lösung (Manuell):** Ich habe dem Container manuell `overflow-x: auto;` hinzugefügt.
+-   **Problem:** Das mobile Menü funktionierte nicht.
+-   **Lösung (mit Cursor):** Ich gab den Prompt ein: *"The mobile menu does not open when the hamburger button is clicked. Here is the relevant HTML and JS. Find the error and fix it."* Die KI korrigierte den Event-Listener.
 
 ---
 
-#### **Prompt für die Kontaktseite (Contact Page)**
+#### **2. Haupt-Prompt: Index Page (Produktübersicht)**
 
-> **Task:** Create the complete code for the **Contact Page**.
->
-> **Page Description:** This is a simple, professional page for user inquiries. It includes information about the team and a functional contact form. The layout should be clean and easy to navigate.
->
-> **Requirements:**
-> 1.  **HTML (`contact.html`):** Structure the page to include:
->     -   A title and an introduction.
->     -   An "Our Team" section with a simple grid for team member cards.
->     -   A contact form with the ID `contactForm`, containing fields for Name, Email, a Subject dropdown, and a Message textarea.
-> 2.  **CSS (`style.css` & `contact.css`):** Use pure CSS. Page-specific styles for the team grid and the form layout go into `contact.css`.
-> 3.  **JavaScript (`contact.js`):** Add an event listener to `#contactForm` to validate the fields and show a confirmation alert on submit. Implement the mobile menu toggle.
+"Act as a senior frontend developer. Generate the complete code for the Product Listing Page of the 'Collab Crocs' website, based on the provided mockup. The code must be organized into separate HTML, CSS, and JavaScript files and use only pure HTML, CSS, and vanilla JS.
+
+Page Goal & Structure:
+The page must serve as the main product catalog. It needs a global header and footer. The main content should include a dynamic title, a filter bar with category buttons, a responsive product grid, and dedicated search input fields for both mobile and desktop views.
+
+Functionality:
+The script must dynamically render all product cards from `products.js`. The grid must instantly update when a user clicks a filter button, and the active button must be visually highlighted. A live search must filter products in real-time as a user types. The filter and search functions must work in combination. The page must also be able to read a filter parameter from the URL on initial load and apply it automatically. If no products match the criteria, a clear "No products found" message should be displayed.
+
+Design and Styling:
+The design must match the mockup. The product grid must be responsive (2 columns on mobile, up to 4 on desktop). The active filter button must be styled with the primary accent color `#e92932`. Use the established dark theme and style guide for all colors and fonts:
+-   Main Background: `#181111`
+-   Secondary Background: `#261c1c`
+-   Interactive Elements: `#382929`
+-   Primary Accent: `#e92932`
+-   Primary Text: `#FFFFFF`
+-   Secondary Text: `#b89d9f`
+-   Fonts: 'Be Vietnam Pro', 'Noto Sans'."
+
+**Anpassungen nach der Generierung:**
+-   **Problem:** Die Kombination aus Filter und Suche war fehlerhaft.
+-   **Lösung (mit Cursor):** Ich habe die zuständige Funktion markiert und den Prompt eingegeben: *"Refactor this logic. The search filter should always be applied *after* the category filter, not on the original full list of products."*
+-   **Problem:** Das Layout der Filter-Buttons war auf kleinen Bildschirmen überladen.
+-   **Lösung (Manuell):** Ich habe manuell CSS-Klassen hinzugefügt, um weniger wichtige Filter auf kleinen Bildschirmen auszublenden.
 
 ---
 
-### 2. Manuelle Überarbeitung und Korrekturen
+#### **3. Haupt-Prompt: Detail Page (Produkt)**
 
-Der von der KI generierte Code war eine gute Basis, erforderte aber manuelle Nacharbeit. Ich habe jede Ausgabe getestet und Fehler korrigiert. Manchmal habe ich die KI mit präzisen Prompts zur Fehlerbehebung genutzt, manchmal habe ich die Fehler direkt im Code behoben. Dieser iterative Prozess aus KI-Generierung und manueller Kontrolle war entscheidend für die Qualität des Endprodukts.
+"Act as a senior frontend developer. Generate the complete code for the Product Detail Page, based on the provided mockup. Organize the code into separate HTML, CSS, and JavaScript files, using only pure web technologies.
+
+Page Goal & Structure:
+The page must display all relevant information for a single product. It needs a global header and footer. The main content should contain a breadcrumbs navigation element, a main product display area, and a hidden "Product Not Found" message. The product display should contain placeholders for a large product image, name, price, and description. An order form must be present, containing a size selector and a quantity input.
+
+Functionality:
+The page must be fully dynamic. The script must read a product ID from the URL. It then finds the matching product in `products.js` and populates all elements with its data, including dynamically creating the options for the size selector. If no product is found, it must show the "Product Not Found" message. The order form must show a confirmation alert upon submission.
+
+Design and Styling:
+The design must match the mockup, featuring a two-column layout on desktop and a stacked layout on mobile. The product image should have a white background to stand out against the dark theme. Use the established style guide for all colors and fonts:
+-   Main Background: `#181111`
+-   Secondary Background: `#261c1c`
+-   Interactive Elements: `#382929`
+-   Primary Accent: `#e92932`
+-   Primary Text: `#FFFFFF`
+-   Secondary Text: `#b89d9f`
+-   Fonts: 'Be Vietnam Pro', 'Noto Sans'."
+
+**Anpassungen nach der Generierung:**
+-   **Problem:** Der weisse Hintergrund der Produktbilder wirkte flach.
+-   **Lösung (Manuell):** Ich habe der Bild-Wrapper-Klasse manuell einen leichten `box-shadow` hinzugefügt.
+
+---
+
+#### **4. Haupt-Prompt: Contact Page**
+
+"Act as a senior frontend developer. Generate the complete code for a static Contact Page, based on the provided mockup. Organize the code into separate HTML, CSS, and JavaScript files.
+
+Page Goal & Structure:
+The page must provide users with a way to get in touch. It needs a global header and footer. The main content should have a title "Contact Us", a short intro text, an "Our Team" section, and a contact form. The team section must display a card for "Simon Deuber, Ergon Informatik AG".
+
+Functionality:
+The contact form must be functional. The script should validate that all fields are filled upon submission, prevent the page from reloading, and then display a confirmation alert.
+
+Form Requirements:
+The form needs labeled fields for Name, Email, a dropdown for Subject with predefined options ("Order Inquiry", "Product Question", etc.), and a textarea for the Message.
+
+Design and Styling:
+The layout should be clean, centered, and responsive, using the established style guide:
+-   Main Background: `#181111`
+-   Secondary Background: `#261c1c`
+-   Interactive Elements: `#382929`
+-   Primary Accent: `#e92932`
+-   Primary Text: `#FFFFFF`
+-   Secondary Text: `#b89d9f`
+-   Fonts: 'Be Vietnam Pro', 'Noto Sans'."
+
+**Anpassungen nach der Generierung:**
+-   **Problem:** Das `select` Dropdown-Menü war nicht an das dunkle Design angepasst.
+-   **Lösung (Manuell):** Ich habe benutzerdefinierte CSS-Regeln hinzugefügt, um dem `select`-Element das gleiche dunkle Aussehen wie den anderen Input-Feldern zu geben.
+
+---
+
+#### **5. Haupt-Prompt: Terms & Privacy Pages**
+
+"Act as a senior frontend developer. Generate the complete code for two static legal pages: a **Terms of Service Page** and a **Privacy Policy Page**. Both pages should be based on the provided simple text-based mockup. Organize the code into separate HTML and CSS files for each page (e.g., `terms.html` and `terms.css`, `privacy.html` and `privacy.css`).
+
+Page Goal & Structure:
+Both pages must be simple, professional, and easy to read. They need to include the global header and footer for consistent navigation. The main content of each page should be a single column of text, broken into sections with clear headings. Generate placeholder text for the content of each section (e.g., for "Introduction", "Information We Collect", "Acceptance of Terms", etc.).
+
+Functionality:
+These pages are static and require no complex JavaScript, apart from the script that powers the global mobile menu, which should be included.
+
+Design and Styling:
+The design must be clean and prioritize readability. Use the established style guide for colors and fonts. The main content should be centered with a maximum width to ensure comfortable reading length. Headings for each section should use the primary accent color `#e92932` to break up the text. Links within the text should also be styled with the accent color. The layout must be responsive."
+
+**Anpassungen nach der Generierung:**
+-   **Problem:** Die KI hat für die Rechtstext-Seiten zu viel kreatives Layout hinzugefügt (Karten, Boxen etc.).
+-   **Lösung (Manuell):** Ich habe das CSS stark vereinfacht und auf ein simples, einspaltiges Text-Layout mit Trennlinien zwischen den Abschnitten reduziert, um die Lesbarkeit zu maximieren.
+
+## Fazit und Reflexion
+
+Obwohl ich bereits vor diesem Projekt Erfahrungen mit KI-Tools gesammelt hatte, hat mir diese Arbeit ermöglicht, meinen Workflow gezielt zu professionalisieren. Ich habe mich intensiv damit beschäftigt, wie man die Zusammenarbeit mit einer KI verbessern kann. Das Ergebnis ist ein deutlich effizienterer Prozess.
+
+Ich habe gelernt, die Stärken verschiedener Tools strategisch zu nutzen: **Google AI Studio** für die Erstellung der umfassenden Code-Basis und **Cursor** für die anschliessende, präzise Fehlerbehebung und Verfeinerung. Der grösste Fortschritt lag im "Prompt Engineering". Anstatt vage Anweisungen zu geben, habe ich gelernt, extrem detaillierte Prompts zu formulieren, die wie ein technisches Anforderungsdokument aufgebaut sind. Dies führte zu qualitativ hochwertigerem Code und sparte viele Korrekturschleifen.
+
+Insgesamt konnte ich durch diesen verfeinerten KI-Einsatz:
+-   schneller und strukturierter entwickeln
+-   häufiger Varianten ausprobieren, da ich mehr Zeit hatte
+-   Fehler effizienter beheben
+-   mein Wissen deutlich vertiefen
+
+Ich sehe KI nicht als Ersatz für eigenes Denken, sondern als ein mächtiges Werkzeug, das mir hilft, bessere Ergebnisse in kürzerer Zeit zu erzielen.
 
 ## Setup
 
